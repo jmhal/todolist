@@ -1,0 +1,9 @@
+wheel
+gunicorn
+Flask
+Flask-SQLAlchemy
+psycopg2-binary
+Flask-Migrate
+python-dotenv
+pytest 
+pytest-cov 

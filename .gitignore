@@ -1,0 +1,49 @@
+# Ignorar o virtual environment
+venv/
+.venv/
+
+# Ignorar arquivos compilados Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar pasta de instância do Flask (usada para config local e dados persistentes)
+instance/
+
+# Ignorar arquivos de cache e logs
+*.log
+.pytest_cache/
+.mypy_cache/
+
+# Ignorar arquivos de IDE
+.vscode/
+.idea/
+*.swp # Arquivos swap do Vim/Nano
+
+# Ignorar arquivos de variáveis de ambiente local
+.env
+
+# Ignorar credenciais e chaves secretas (se por engano estiverem no diretório do projeto)
+*.key
+*.pem
+*.crt
+*.p12
+*.conf # Cuidado: ignore apenas arquivos de config sensíveis, não o default.conf do Nginx se ele for genérico
+
+# Ignorar artefatos de build Docker (opcional, as imagens são gerenciadas pelo Docker)
+# Embora o Dockerfile e docker-compose.yml sejam versionados,
+# você pode querer ignorar arquivos temporários gerados pelo build.
+# docker-compose.dev.yml # Se você não quiser versionar o arquivo de dev (geralmente se versiona)
+# docker-compose.hml.yml # Se você não quiser versionar o arquivo de hml (geralmente se versiona)
+# docker-compose.prod.yml # Se você não quiser versionar o arquivo de prod (geralmente se versiona)
+
+# Manter os scripts de migração gerados pelo Flask-Migrate
+# A pasta migrations/versions/ DEVE ser versionada
+# migrations/ # NÃO IGNORE esta pasta, apenas arquivos específicos dentro dela se necessário (ex: logs de migração)
+
+# Arquivos do Terraform
+*.tfstate
+*.tfvars
+.terraform*
+terraform.tfstate*
